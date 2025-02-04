@@ -3,70 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@701&display=swap');
+    </style>
+  <title>Calculator app</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles.css">
   
-  <title>Frontend Mentor | Calculator app</title>
 
 </head>
 <body>
     <div class="container">
-        <div id="themeHeader"> 
-            <p id="calcTitle">Calculator</p>
-            <p id="calcTheme">Theme</p>
-            <p id="switchNumbers">1 2 3</p>
-            <div id="buttonTheme">
-                <button></button>
+        <div class="numbers-switcher">
+            <div class="theme-numbers">1</div>
+            <div class="theme-numbers">2</div>
+            <div class="theme-numbers">3</div>
+        </div>
+        <div class="header">
+            <div class="logo">CALC</div>
+            <div class="theme-switch">
+                <p class="theme">THEME</p>
+                <div class="toggle">
+                    <input type="hidden" id="switcher" class="switcher" value="0">
+                    <label class="switch" onclick="toggleSwitch()"></label>
+                </div>
             </div>
         </div>
     
-        <div id="calcScreen" class="numbers">
-            <input type="text" placeholder="">
+        <div id="calcScreen">
+            <p id="result">0</p>
         </div>
 
         <div id="operations">
-            <div id="operation1">
+            <div id="operation1" class="operation-line">
                 <button class="numbers">7</button>
                 <button class="numbers">8</button>
                 <button class="numbers">9</button>
-                <button class="delReset">DEL</button>
+                <button class="del-reset">DEL</button>
             </div>
-            <div id="operation2">
+            <div id="operation2" class="operation-line">
                 <button class="numbers">4</button>
                 <button class="numbers">5</button>
                 <button class="numbers">6</button>
                 <button class="numbers">+</button>
             </div>
-            <div id="operation3">
+            <div id="operation3" class="operation-line">
                 <button class="numbers">1</button>
                 <button class="numbers">2</button>
                 <button class="numbers">3</button>
                 <button class="numbers">-</button>
             </div>
-            <div id="operation4">
+            <div id="operation4" class="operation-line">
                 <button class="numbers">.</button>
                 <button class="numbers">0</button>
                 <button class="numbers">/</button>
                 <button class="numbers">*</button>
             </div>
             <div id="operation5">
-                <button class="delReset">RESET</button>
-                <button id="result">=</button>
-                
+                <button class="del-reset">RESET</button>
+                <button id="equal" class="del-reset">=</button>    
             </div>
         </div>
-
-
     </div>
-
-
-
 </body>
+<script src="./script.js"></script>
 <footer>
     <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="https://github.com/tiagoaOliveira">Tiago Oliveira</a>.
+        Coded by <a href="https://github.com/tiagoaOliveira" target="_blank">Tiago Oliveira</a>.
       </div>
 </footer>
 </html>

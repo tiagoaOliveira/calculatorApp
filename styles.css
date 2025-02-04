@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    background: hsl(222, 26%, 31%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: "League Spartan", serif;
+    font-weight: 701;
+}
+
+.container {
+    padding-top: 50px;
+}
+
+/*HEADER*/
+.numbers-switcher {
+    display: flex;
+    color: white;
+    justify-content: flex-end;   
+}
+
+.theme-numbers {
+    font-size: 20px;
+    padding-left: 18px;
+    padding-right: 5px;
+}
+
+.logo {
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.theme-switch {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch p{
+    display: inline-flex;
+    font-size: 18px;
+    align-items: center;
+
+}
+
+.toggle {
+    display: flex;
+    margin-left: 20px;
+}
+
+.switch {
+    display: block;
+    position: relative;
+    width: 90px;
+    height: 35px;
+    border-radius: 50px;
+    cursor: pointer;
+    background: hsl(223, 31%, 20%);
+}
+
+.switch::before {
+    position: absolute;
+    content: "";
+    background: hsl(6, 63%, 50%);
+    width: 26px;
+    height:26px;
+    border-radius: 20px;
+    margin: 4px 5px;
+    cursor:pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+input:checked + .switch {
+    background: hsl(223, 31%, 20%);
+}
+
+input:checked + .switch::before {
+    transform: translateX(55px);
+}
+
+.switcher {
+    display: none;
+}
+
+.switch[data-position="1"]::before { transform: translateX(27px); }
+.switch[data-position="2"]::before { transform: translateX(55px); }
+
+/*RESULT*/
+#result {
+    display: flex;
+    flex-direction: row-reverse;
+    background:hsl(224, 36%, 15%);
+    color: white;
+    padding: 30px 20px 30px 0px;
+    border-radius: 15px;
+    font-size: 40px;
+}
+
+/*OPERATIONS*/
+#operations {
+    background: hsl(223, 31%, 20%);
+    border-radius: 10px;
+    color: white;
+}
+
+.numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:  hsl(221, 14%, 31%);
+}
+
+button{
+    width: 120px;
+    height: 70px;
+    font-size: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: hsl(30, 25%, 89%);
+    cursor:grabbing;
+    box-shadow: 0px 5px hsl(28, 16%, 65%);
+    font-family: "League Spartan", serif;
+    font-weight: 701;
+}
+
+.operation-line {
+    display: flex;
+    padding: 30px 25px 0px 25px;
+    gap: 20px;
+}
+
+#operation5, .del-reset{
+    color: hsl(221, 14%, 31%);
+    font-size: 40px;
+}
+
+#operation5{
+ display: flex;
+ gap: 20px;
+ padding: 20px 20px 30px 20px;
+}
+#operation5 button {
+    flex: 1;
+}
+
+
+/* footer */
+footer {
+    padding-top: 100px;
+}
