@@ -82,18 +82,6 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-input:checked + .switch {
-    background: hsl(223, 31%, 20%);
-}
-
-input:checked + .switch::before {
-    transform: translateX(55px);
-}
-
-.switcher {
-    display: none;
-}
-
 .switch[data-position="1"]::before { transform: translateX(27px); }
 .switch[data-position="2"]::before { transform: translateX(55px); }
 
@@ -125,7 +113,7 @@ input:checked + .switch::before {
 button{
     width: 120px;
     height: 70px;
-    font-size: 50px;
+    font-size: 42px;
     border-radius: 10px;
     border: none;
     background-color: hsl(30, 25%, 89%);
@@ -142,8 +130,17 @@ button{
 }
 
 #operation5, .del-reset{
-    color: hsl(221, 14%, 31%);
-    font-size: 40px;
+    box-shadow: 0px 5px hsl(224, 28%, 35%);
+}
+
+.del-reset {
+    background: hsl(225, 21%, 49%);
+    color: white;
+}
+
+#equal {
+    background: hsl(6, 63%, 50%);
+    box-shadow: 0px 5px hsl(6, 70%, 34%);
 }
 
 #operation5{
@@ -159,4 +156,9 @@ button{
 /* footer */
 footer {
     padding-top: 100px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
 }
